@@ -57,7 +57,7 @@ public class LibraryMainTest {
     public void testAddBook(){
         LibraryMain lM = new LibraryMain();
         Book b;
-        b = lM.AddBook("Kingfisher");
+        b = lM.AddBook(1,false,"Kingfisher");
         lM.itemList.add(b);
         assertTrue(lM.itemList.contains(b));
         assertEquals(1,b.getIID());
@@ -68,7 +68,7 @@ public class LibraryMainTest {
     public void AddMagazene(){
         LibraryMain lM = new LibraryMain();
         Magazene m;
-        m = lM.AddMagazene(false);
+        m = lM.AddMagazene(1,false,false);
         lM.itemList.add(m);
         assertTrue(lM.itemList.contains(m));
         assertEquals(1,m.getIID());
@@ -79,7 +79,7 @@ public class LibraryMainTest {
     public void AddMap(){
         LibraryMain lM = new LibraryMain();
         Map m;
-        m = lM.AddMap("Suffolk");
+        m = lM.AddMap(1,false,"Suffolk");
         lM.itemList.add(m);
         assertTrue(lM.itemList.contains(m));
         assertEquals(1,m.getIID());
